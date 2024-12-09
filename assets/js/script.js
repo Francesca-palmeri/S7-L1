@@ -73,6 +73,10 @@ button.onclick = function () {
     species.value,
     breed.value
   );
+  pets.forEach((pet) => {
+    let isSameOwner = newPet.sameOwner(pet);
+    console.log(`Il nuovo animale "${newPet.petName}" ha lo stesso padrone di "${pet.petName}": ${isSameOwner}`);
+  });
   pets.push(newPet);
   createList();
   petName.value = "";
