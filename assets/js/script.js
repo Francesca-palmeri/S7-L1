@@ -46,6 +46,14 @@ class Pets {
     this.species = species;
     this.breed = breed;
   }
+
+  sameOwner(otherPet) {
+    if (this.ownerName === otherPet.ownerName) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 const createList = function () {
@@ -72,3 +80,4 @@ button.onclick = function () {
   species.value = "";
   breed.value = "";
 };
+
