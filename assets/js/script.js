@@ -78,6 +78,8 @@ button.onclick = function () {
     console.log(`Il nuovo animale "${newPet.petName}" ha lo stesso padrone di "${pet.petName}": ${isSameOwner}`);
   });
   pets.push(newPet);
+  const jsonObj = JSON.stringify(pets);//creo la variabile per trasformare l'array in dati stringa
+  localStorage.setItem("pets", jsonObj);//setItem salva nella memoria gli elementi stringa inseriti (jsonObj) e setto il primo valore per poterlo recuperare con getItem. 
   createList();
   petName.value = "";
   ownerName.value = "";
